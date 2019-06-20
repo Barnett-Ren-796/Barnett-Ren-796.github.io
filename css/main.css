@@ -1762,7 +1762,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6cff26;
+  background: #5b7359;
 }
 .feed-link,
 .chat {
@@ -2999,7 +2999,7 @@ ul.breadcrumb li+li:last-child {
   }
 }
 body {
-  background-image: url("/images/background.jpg");
+  background-image: url("/images/background4.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
