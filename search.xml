@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[test]]></title>
-    <url>%2F2019%2F06%2F20%2Ftest%2F</url>
-    <content type="text"><![CDATA[标题小标题啦啦啦 正文qwq 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758#include&lt;iostream&gt;#include&lt;cstring&gt;#include&lt;cstdio&gt;#include&lt;cmath&gt;#include&lt;algorithm&gt;#define ll long long#define INF 0x7fffffff#define re registerusing namespace std;int read()&#123; register int x = 0,f = 1;register char ch; ch = getchar(); while(ch &gt; '9' || ch &lt; '0')&#123;if(ch == '-') f = -f;ch = getchar();&#125; while(ch &lt;= '9' &amp;&amp; ch &gt;= '0')&#123;x = x * 10 + ch - 48;ch = getchar();&#125; return x * f;&#125;struct edge&#123; int x,y,z;&#125;e[10005];int fa[1005],n,m,ans,k,cnt;int find(int x)&#123;if(fa[x] == x) return x; return fa[x] = find(fa[x]);&#125; int mysort(edge a, edge b)&#123;return a.z &lt; b.z;&#125;int main()&#123; n = read(); m = read(); k = read(); for(re int i = 1; i &lt;= m; i++) &#123; e[i].x = read(); e[i].y = read(); e[i].z = read(); &#125; sort(e + 1, e + m + 1, mysort); cnt = n; int j = 0; for(re int i = 1; i &lt;= n; i++) fa[i] = i; while(cnt &gt; k) &#123; j ++; if(find(e[j].x) != find(e[j].y)) &#123; fa[find(e[j].x)] = find(e[j].y); cnt --; ans += e[j].z; &#125; &#125; printf("%d\n",ans); return 0;&#125;]]></content>
+    <title><![CDATA[最短路计数-题解]]></title>
+    <url>%2F2019%2F06%2F20%2F%E6%9C%80%E7%9F%AD%E8%B7%AF%E8%AE%A1%E6%95%B0-%E9%A2%98%E8%A7%A3%2F</url>
+    <content type="text"><![CDATA[查看原题请戳这里 虽然题目叫最短路计数，但是TA可以只用到最短路的概念而不用最短路的算法……由于这是一个无权图，所以一条路径上边的数量就是这条路径的长度，那么我们就可以用BFS来搞定这个问题了。 具体思路我们每遍历到一个节点就和ta的前一个结点的距离比较，这里会有三种情况：(由1到2) 2号点没有被访问过||time[1] + 1 &lt; time[2]：此时我们直接用1号点的信息去更新2就好啦 time[1] + 1 = time[2] : 这个我们就只需要更新一下ans就可以啦 time[1] + 1 &gt; time[2] :此时这条路径比之前的某条路径要长，直接跳过就可以啦代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768#include&lt;iostream&gt;#include&lt;cstring&gt;#include&lt;cstdio&gt;#include&lt;cmath&gt;#include&lt;algorithm&gt;#include&lt;queue&gt;#define ll long long#define INF 0x7fffffff#define re registerusing namespace std;int read()&#123; register int x = 0,f = 1;register char ch; ch = getchar(); while(ch &gt; '9' || ch &lt; '0')&#123;if(ch == '-') f = -f;ch = getchar();&#125; while(ch &lt;= '9' &amp;&amp; ch &gt;= '0')&#123;x = x * 10 + ch - 48;ch = getchar();&#125; return x * f;&#125;queue&lt;int&gt; que;struct edge&#123; int next,to,v;&#125;e[2000005];int n,m,cnt,x,now,y,tim[2000000],ans[2000000],d[2000000];inline int add(int x,int y)&#123; e[++cnt].to = y; e[cnt].next = d[x]; d[x] = cnt;&#125;int main()&#123; n = read(); m = read(); for(re int i = 1; i &lt;= m; i++) &#123; x = read(); y = read(); add(x,y); add(y,x); &#125; que.push(1); ans[1] = 1; while(!que.empty()) &#123; now = que.front(); que.pop(); for(re int i = d[now]; i; i = e[i].next) &#123; if(tim[now] + 1 &lt; tim[e[i].to] || tim[e[i].to] == 0) &#123; tim[e[i].to] = tim[now] + 1; ans[e[i].to] = ans[now]; que.push(e[i].to); &#125; else if(tim[now] + 1 == tim[e[i].to]) ans[e[i].to] = (ans[e[i].to] + ans[now]) % 100003; &#125; &#125; ans[1] = 1; for(re int i = 1; i &lt;= n; i++) printf("%d\n",ans[i]); return 0;&#125;]]></content>
       <tags>
-        <tag>test</tag>
+        <tag>最短路</tag>
+        <tag>BFS</tag>
+        <tag>图论</tag>
       </tags>
   </entry>
   <entry>
