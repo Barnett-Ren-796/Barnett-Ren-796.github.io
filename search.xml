@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[test]]></title>
+    <url>%2F2019%2F06%2F20%2Ftest%2F</url>
+    <content type="text"><![CDATA[标题小标题啦啦啦 正文qwq 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758#include&lt;iostream&gt;#include&lt;cstring&gt;#include&lt;cstdio&gt;#include&lt;cmath&gt;#include&lt;algorithm&gt;#define ll long long#define INF 0x7fffffff#define re registerusing namespace std;int read()&#123; register int x = 0,f = 1;register char ch; ch = getchar(); while(ch &gt; '9' || ch &lt; '0')&#123;if(ch == '-') f = -f;ch = getchar();&#125; while(ch &lt;= '9' &amp;&amp; ch &gt;= '0')&#123;x = x * 10 + ch - 48;ch = getchar();&#125; return x * f;&#125;struct edge&#123; int x,y,z;&#125;e[10005];int fa[1005],n,m,ans,k,cnt;int find(int x)&#123;if(fa[x] == x) return x; return fa[x] = find(fa[x]);&#125; int mysort(edge a, edge b)&#123;return a.z &lt; b.z;&#125;int main()&#123; n = read(); m = read(); k = read(); for(re int i = 1; i &lt;= m; i++) &#123; e[i].x = read(); e[i].y = read(); e[i].z = read(); &#125; sort(e + 1, e + m + 1, mysort); cnt = n; int j = 0; for(re int i = 1; i &lt;= n; i++) fa[i] = i; while(cnt &gt; k) &#123; j ++; if(find(e[j].x) != find(e[j].y)) &#123; fa[find(e[j].x)] = find(e[j].y); cnt --; ans += e[j].z; &#125; &#125; printf("%d\n",ans); return 0;&#125;]]></content>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F06%2F19%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
