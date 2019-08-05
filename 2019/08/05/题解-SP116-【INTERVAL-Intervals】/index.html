@@ -96,17 +96,21 @@
 
 
 
-  <meta name="description" content="查看原题请戳这里 虽然题目叫最短路计数，但是TA可以只用到最短路的概念而不用最短路的算法……由于这是一个无权图，所以一条路径上边的数量就是这条路径的长度，那么我们就可以用BFS来搞定这个问题了。 具体思路我们每遍历到一个节点就和ta的前一个结点的距离比较，这里会有三种情况：(由1到2)  2号点没有被访问过||time[1] + 1 &amp;lt; time[2]：此时我们直接用1号点的信息去更新2就">
+  <meta name="description" content="查看原题请戳这里 差分约束差分约束系统：由N个变量$X_1, X_2, X_3 …. X_N$和$M$个未知条件组成的N元一次不等式组，其中，每个条件都形如$X_i \le X_j + C_k$我们的问题是：给出一组满足所有条件的解，否则判断出无解   注意到，$X_i\le X_j + c_k$ 与单源最短路中的三角不等式很相似，建立N个节点对应N个变量。对于每组条件，从 j 向i连一条边。同时">
+<meta name="keywords" content="差分约束">
 <meta property="og:type" content="article">
-<meta property="og:title" content="最短路计数-题解">
-<meta property="og:url" content="http://yoursite.com/2019/08/02/最短路计数-题解/index.html">
+<meta property="og:title" content="题解 SP116 【INTERVAL - Intervals】">
+<meta property="og:url" content="http://yoursite.com/2019/08/05/题解-SP116-【INTERVAL-Intervals】/index.html">
 <meta property="og:site_name" content="wflight的博客">
-<meta property="og:description" content="查看原题请戳这里 虽然题目叫最短路计数，但是TA可以只用到最短路的概念而不用最短路的算法……由于这是一个无权图，所以一条路径上边的数量就是这条路径的长度，那么我们就可以用BFS来搞定这个问题了。 具体思路我们每遍历到一个节点就和ta的前一个结点的距离比较，这里会有三种情况：(由1到2)  2号点没有被访问过||time[1] + 1 &amp;lt; time[2]：此时我们直接用1号点的信息去更新2就">
+<meta property="og:description" content="查看原题请戳这里 差分约束差分约束系统：由N个变量$X_1, X_2, X_3 …. X_N$和$M$个未知条件组成的N元一次不等式组，其中，每个条件都形如$X_i \le X_j + C_k$我们的问题是：给出一组满足所有条件的解，否则判断出无解   注意到，$X_i\le X_j + c_k$ 与单源最短路中的三角不等式很相似，建立N个节点对应N个变量。对于每组条件，从 j 向i连一条边。同时">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-02T02:31:29.921Z">
+<meta property="og:image" content="http://yoursite.com/2019/08/05/题解-SP116-【INTERVAL-Intervals】/1564974953405.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/05/题解-SP116-【INTERVAL-Intervals】/1564974989829.png">
+<meta property="og:updated_time" content="2019-08-05T03:18:50.622Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="最短路计数-题解">
-<meta name="twitter:description" content="查看原题请戳这里 虽然题目叫最短路计数，但是TA可以只用到最短路的概念而不用最短路的算法……由于这是一个无权图，所以一条路径上边的数量就是这条路径的长度，那么我们就可以用BFS来搞定这个问题了。 具体思路我们每遍历到一个节点就和ta的前一个结点的距离比较，这里会有三种情况：(由1到2)  2号点没有被访问过||time[1] + 1 &amp;lt; time[2]：此时我们直接用1号点的信息去更新2就">
+<meta name="twitter:title" content="题解 SP116 【INTERVAL - Intervals】">
+<meta name="twitter:description" content="查看原题请戳这里 差分约束差分约束系统：由N个变量$X_1, X_2, X_3 …. X_N$和$M$个未知条件组成的N元一次不等式组，其中，每个条件都形如$X_i \le X_j + C_k$我们的问题是：给出一组满足所有条件的解，否则判断出无解   注意到，$X_i\le X_j + c_k$ 与单源最短路中的三角不等式很相似，建立N个节点对应N个变量。对于每组条件，从 j 向i连一条边。同时">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/05/题解-SP116-【INTERVAL-Intervals】/1564974953405.png">
 
 
 
@@ -114,7 +118,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/08/02/最短路计数-题解/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/05/题解-SP116-【INTERVAL-Intervals】/">
 
 
 
@@ -124,7 +128,7 @@
   };
 </script>
 
-  <title>最短路计数-题解 | wflight的博客</title>
+  <title>题解 SP116 【INTERVAL - Intervals】 | wflight的博客</title>
   
 
 
@@ -339,7 +343,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/02/最短路计数-题解/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/05/题解-SP116-【INTERVAL-Intervals】/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wflight">
@@ -356,7 +360,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">最短路计数-题解
+          <h1 class="post-title" itemprop="name headline">题解 SP116 【INTERVAL - Intervals】
 
               
             
@@ -382,7 +386,7 @@
                 
               
 
-              <time title="创建时间：2019-08-02 10:03:56 / 修改时间：10:31:29" itemprop="dateCreated datePublished" datetime="2019-08-02T10:03:56+08:00">2019-08-02</time>
+              <time title="创建时间：2019-08-05 10:56:19 / 修改时间：11:18:50" itemprop="dateCreated datePublished" datetime="2019-08-05T10:56:19+08:00">2019-08-05</time>
             
 
             
@@ -428,16 +432,18 @@
       
 
       
-        <div class="post-body" itemprop="articleBody">
-<p><a href="https://www.luogu.org/problemnew/show/P1144" rel="noopener" target="_blank">查看原题请戳这里</a></p>
-<h4 id="虽然题目叫最短路计数，但是TA可以只用到最短路的概念而不用最短路的算法……"><a class="headerlink" href="#虽然题目叫最短路计数，但是TA可以只用到最短路的概念而不用最短路的算法……" title="虽然题目叫最短路计数，但是TA可以只用到最短路的概念而不用最短路的算法……"></a>虽然题目叫<code>最短路计数</code>，但是TA可以只用到最短路的概念而不用最短路的算法……</h4><p>由于这是一个无权图，所以一条路径上边的数量就是这条路径的长度，那么我们就可以用BFS来搞定这个问题了。</p>
-<h4 id="具体思路"><a class="headerlink" href="#具体思路" title="具体思路"></a>具体思路</h4><p>我们每遍历到一个节点就和ta的前一个结点的距离比较，这里会有三种情况：(由1到2)</p>
-<ol>
-<li>2号点没有被访问过||time[1] + 1 &lt; time[2]：此时我们直接用1号点的信息去更新2就好啦</li>
-<li>time[1] + 1 = time[2] : 这个我们就只需要更新一下ans就可以啦</li>
-<li>time[1] + 1 &gt; time[2] :此时这条路径比之前的某条路径要长，直接跳过就可以啦<h4 id="代码"><a class="headerlink" href="#代码" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INF 0x7fffffff</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> re register</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">register</span> <span class="keyword">int</span> x = <span class="number">0</span>,f = <span class="number">1</span>;<span class="keyword">register</span> <span class="keyword">char</span> ch;</span><br><span class="line">    ch = getchar();</span><br><span class="line">    <span class="keyword">while</span>(ch &gt; <span class="string">'9'</span> || ch &lt; <span class="string">'0'</span>){<span class="keyword">if</span>(ch == <span class="string">'-'</span>) f = -f;ch = getchar();}</span><br><span class="line">    <span class="keyword">while</span>(ch &lt;= <span class="string">'9'</span> &amp;&amp; ch &gt;= <span class="string">'0'</span>){x = x * <span class="number">10</span> + ch - <span class="number">48</span>;ch = getchar();}</span><br><span class="line">    <span class="keyword">return</span> x * f;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; que;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span>{</span></span><br><span class="line">    <span class="keyword">int</span> next,to,v;</span><br><span class="line">}e[<span class="number">2000005</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,m,cnt,x,now,y,tim[<span class="number">2000000</span>],ans[<span class="number">2000000</span>],d[<span class="number">2000000</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    e[++cnt].to = y;</span><br><span class="line">    e[cnt].next = d[x];</span><br><span class="line">    d[x] = cnt;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    n = read();</span><br><span class="line">    m = read();</span><br><span class="line">    <span class="keyword">for</span>(re <span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i++)</span><br><span class="line">    {</span><br><span class="line">        x = read(); y = read();</span><br><span class="line">        add(x,y); add(y,x);</span><br><span class="line">        </span><br><span class="line">    }</span><br><span class="line">    que.push(<span class="number">1</span>);</span><br><span class="line">    ans[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(!que.empty())</span><br><span class="line">    {</span><br><span class="line">        now = que.front();</span><br><span class="line">        que.pop();</span><br><span class="line">        <span class="keyword">for</span>(re <span class="keyword">int</span> i = d[now]; i; i = e[i].next)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">if</span>(tim[now] + <span class="number">1</span> &lt; tim[e[i].to] || tim[e[i].to] == <span class="number">0</span>)</span><br><span class="line">            {</span><br><span class="line">                tim[e[i].to] = tim[now] + <span class="number">1</span>;</span><br><span class="line">                ans[e[i].to] = ans[now];</span><br><span class="line">                que.push(e[i].to);</span><br><span class="line">            }</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">if</span>(tim[now] + <span class="number">1</span> == tim[e[i].to]) ans[e[i].to] = (ans[e[i].to] + ans[now]) % <span class="number">100003</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    ans[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(re <span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans[i]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></li>
-</ol>
-</div>
+        <p><a href="https://www.luogu.org/problem/SP116" target="_blank" rel="noopener">查看原题请戳这里</a></p>
+<h2 id="差分约束"><a href="#差分约束" class="headerlink" title="差分约束"></a>差分约束</h2><p>差分约束系统：由N个变量$X_1, X_2, X_3 …. X_N$和$M$个未知条件组成的N元一次不等式组，其中，每个条件都形如<br>$X_i \le X_j + C_k$<br>我们的问题是：给出一组满足所有条件的解，否则判断出无解  </p>
+<p>注意到，$X_i\le X_j + c_k$ 与单源最短路中的三角不等式很相似，建立N个节点对应N个变量。对于每组条件，从 j 向i连一条边。同时虚构0号节点并向每一个节点连一条边，如果存在负环则无解。否则有解。  </p>
+<h2 id="问题转化"><a href="#问题转化" class="headerlink" title="问题转化"></a>问题转化</h2><p>那么，我们怎么根据这个题目建立起一个差分约束系统呢？<br>我们可以用$siz[i]$表示区间$[0,i]$中被选的元素的个数，那么区间$[a_i,b_i]$中被选中的元素的个数我们就可以用$siz[b_i]-siz[a_i-1]$来表示。于是我们就可以从$a_i-1$向$b_i$连一条权值为$w$的有向边。<br>另外，为了保证图的连通性，我们需要再从每一个数$a$向$a+1$连一条权为$0$的边，从每一个数$a$向$a-1$连一条权为$-1$的边。</p>
+<p>那么，为什么这么连呢？  </p>
+<p>因为$siz[a+1] -siz[a] \le 1$且$siz[a]-siz[a+1]\ge-1$。</p>
+<p>最终的图是这个样子的（以该数据为例）<img src="1564974953405.png" alt="1564974953405"></p>
+<p><img src="1564974989829.png" alt="1564974989829"></p>
+<p>code：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INF 0x7fffffff</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> re register</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">register</span> <span class="keyword">int</span> x = <span class="number">0</span>,f = <span class="number">1</span>;<span class="keyword">register</span> <span class="keyword">char</span> ch;</span><br><span class="line">	ch = getchar();</span><br><span class="line">	<span class="keyword">while</span>(ch &gt; <span class="string">'9'</span> || ch &lt; <span class="string">'0'</span>)&#123;<span class="keyword">if</span>(ch == <span class="string">'-'</span>) f = -f;ch = getchar();&#125;</span><br><span class="line">	<span class="keyword">while</span>(ch &lt;= <span class="string">'9'</span> &amp;&amp; ch &gt;= <span class="string">'0'</span>)&#123;x = x * <span class="number">10</span> + ch - <span class="number">48</span>;ch = getchar();&#125;</span><br><span class="line">	<span class="keyword">return</span> x * f;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> x,y,z,n,cnt,ans,minn,maxx;</span><br><span class="line"><span class="keyword">int</span> d[<span class="number">200005</span>],vis[<span class="number">200005</span>],dis[<span class="number">200005</span>];</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> to,next,v;</span><br><span class="line">&#125;e[<span class="number">200005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> z)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	e[++cnt].to = y;</span><br><span class="line">	e[cnt].v = z;</span><br><span class="line">	e[cnt].next = d[x];</span><br><span class="line">	d[x] = cnt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clannad</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= cnt; i++) e[i].to = <span class="number">0</span>,e[i].next = <span class="number">0</span>,e[i].v = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= cnt; i++) d[i] = <span class="number">0</span>;</span><br><span class="line">	cnt = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; que;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">spfa</span><span class="params">(<span class="keyword">int</span> s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(!que.empty()) que.pop();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = minn; i &lt;= maxx; i++) dis[i] = -INF;</span><br><span class="line">	dis[s] = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</span><br><span class="line">	que.push(s);</span><br><span class="line">	dis[s] = <span class="number">0</span>;</span><br><span class="line">	vis[s] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(!que.empty())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> u = que.front();</span><br><span class="line">		que.pop();</span><br><span class="line">		vis[u] = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = d[u]; i; i = e[i].next)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> v = e[i].to;</span><br><span class="line">			<span class="keyword">int</span> w = e[i].v;</span><br><span class="line">			<span class="keyword">if</span>(dis[v] &lt; dis[u] + w)</span><br><span class="line">			&#123;</span><br><span class="line">				dis[v] = dis[u] + w;</span><br><span class="line">				<span class="keyword">if</span>(!vis[v]) que.push(v),vis[v] = <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> dis[maxx];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t;</span><br><span class="line">	t = read();</span><br><span class="line">	<span class="keyword">for</span>(t; t &gt; <span class="number">0</span>; t--)</span><br><span class="line">	&#123;</span><br><span class="line">		n = read();</span><br><span class="line">		maxx = -INF;</span><br><span class="line">		minn = INF;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			x = read();</span><br><span class="line">			y = read();</span><br><span class="line">			z = read();</span><br><span class="line">			add(x - <span class="number">1</span>,y,z);</span><br><span class="line">			maxx = max(y,maxx);</span><br><span class="line">			minn = min(x - <span class="number">1</span>,minn);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = minn; i &lt;= maxx; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			add(i,i + <span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">			add(i + <span class="number">1</span>,	i,<span class="number">-1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> ans = spfa(minn);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">		clannad();</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
 
@@ -458,6 +464,15 @@
 
     <footer class="post-footer">
       
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/差分约束/" rel="tag"># 差分约束</a>
+          
+        </div>
+      
 
       
       
@@ -467,8 +482,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/02/滑雪-题解/" rel="next" title="滑雪-题解">
-                <i class="fa fa-chevron-left"></i> 滑雪-题解
+              <a href="/2019/08/02/钻石收藏家-two pointer/" rel="next" title="钻石收藏家-two pointer">
+                <i class="fa fa-chevron-left"></i> 钻石收藏家-two pointer
               </a>
             
           </div>
@@ -476,10 +491,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/02/求和-题解/" rel="prev" title="求和-题解">
-                求和-题解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -673,7 +684,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#虽然题目叫最短路计数，但是TA可以只用到最短路的概念而不用最短路的算法……"><span class="nav-number">1.</span> <span class="nav-text">虽然题目叫最短路计数，但是TA可以只用到最短路的概念而不用最短路的算法……</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#具体思路"><span class="nav-number">2.</span> <span class="nav-text">具体思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#差分约束"><span class="nav-number">1.</span> <span class="nav-text">差分约束</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题转化"><span class="nav-number">2.</span> <span class="nav-text">问题转化</span></a></li></ol></div>
             
 
           </div>
