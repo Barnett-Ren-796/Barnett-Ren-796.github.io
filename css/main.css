@@ -1762,7 +1762,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2fb98a;
+  background: #79ffff;
 }
 .feed-link,
 .chat {
@@ -2997,13 +2997,4 @@ ul.breadcrumb li+li:last-child {
   .pagination {
     margin: 8px 0 0;
   }
-}
-body {
-  background-image: url("/images/background4.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-.main-inner {
-  opacity: 0.9;
 }
